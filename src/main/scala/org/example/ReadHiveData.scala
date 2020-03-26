@@ -8,6 +8,7 @@ object ReadHiveData {
       .appName("Read data from Hive")
       .enableHiveSupport()
       .getOrCreate()
-    spark.sql("select * from employee")
+    val employeeData = spark.sql("select * from employee")
+    employeeData.show
   }
 }
